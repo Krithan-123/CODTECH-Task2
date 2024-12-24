@@ -1,4 +1,5 @@
 print("**********STUDENT GRADE CALCULATOR**********")
+
 subjects = int(input("Enter the number of subjects : "))
 grades = []
 
