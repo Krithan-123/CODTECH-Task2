@@ -1,0 +1,29 @@
+print("**********STUDENT GRADE CALCULATOR**********")
+subjects = int(input("Enter the number of subjects : "))
+grades = []
+
+for i in range(subjects):
+    grade = int(input(f"Enter marks for subject {i+1}: "))
+    grades.append(grade)
+
+average = sum(grades) / len(grades)
+
+gpa =average / 10
+
+if average >= 90:
+    letter_grade = 'A'
+elif average >= 80:
+    letter_grade = 'B'
+elif average >= 70:
+    letter_grade = 'C'
+elif average >= 60:
+    letter_grade = 'D'
+else:
+    for grade in grades:
+        if grade < 35:
+            letter_grade = 'F'
+            break
+
+print(f"\nAverage grade: {average:.2f}")
+print(f"Letter grade: {letter_grade}")
+print(f"GPA: {gpa:.2f}")
